@@ -1,7 +1,7 @@
 import { Box, Text } from '@chakra-ui/react'
 import {useState, useEffect} from "react";
-import Navbar from '../Navbar/Navbar';
-import Home from '../Home';
+import Navbar from './Navbar';
+import Home from './Home';
 
 
 
