@@ -17,6 +17,7 @@ const Home = () => {
     return (
         <Box className="home">
             {error && <Box>{error}</Box>}
+            
             {isPendng && <Box>Loading...</Box>}
             {blogs && <BlogList blogs={blogs} title="All Blogs" />}
             {/* <BlogList blogs={blogs.filter((e)=> e.author === 'mario')} title="Dennis's Blog" /> */}
