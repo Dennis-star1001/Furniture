@@ -1,27 +1,24 @@
 import './index.css'
-import { Box, Button, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import BlogList from './BlogList';
+import useFetch from './useFetch';
 
 const Home = () => {
 
-    const [blogs, setBlogs] = useState([
-        { title: 'My new website', body: 'lorem ipsum.....', author: 'Dennis', id: '1' },
-        { title: 'Welcome party', body: 'lorem ipsum.....', author: 'mario', id: '2' },
-        { title: 'Web dev top tips', body: 'lorem ipsum.....', author: 'mario', id: '3' }
-    ]);
+    const { data: blogs, isPendng, error } = useFetch('http://localhost:8000/blogs')
+    // const handleDelete = (id) => {
 
-    const handleDelete = (id) => {
-
-        const newBlogs = blogs.filter((e) => e.id !== id)
-        setBlogs(newBlogs)
-    }
-
+    //     const newBlogs = blogs.filter((e) => e.id !== id)
+    //     setBlogs(newBlogs)
+    // }
 
 
     return (
         <Box className="home">
-            <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
+            {error && <Box>{error}</Box>}
+            {isPendng && <Box>Loading...</Box>}
+            {blogs && <BlogList blogs={blogs} title="All Blogs" />}
             {/* <BlogList blogs={blogs.filter((e)=> e.author === 'mario')} title="Dennis's Blog" /> */}
         </Box>
     );

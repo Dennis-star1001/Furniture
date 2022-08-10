@@ -1,0 +1,17 @@
+{
+    "blogs": [
+        {
+            "title": "My First Blog",
+            "body": "Why do we use5 Examples of APIs We Use in Our Everyday Lives 1. Weather Snippets. Google utilizes APIs to display relevant data from user search queries. One common API usage... 2. Log-in Using XYZ.",
+            "author": "Mario",
+            "id": 1
+        },
+        {
+            "title": "My Second Blog",
+            "body": "Why do we use5 Examples of APIs We Use in Our Everyday Lives 1. Weather Snippets. Google utilizes APIs to display relevant data from user search queries. One common API usage... 2. Log-in Using XYZ.",
+            "author": "Dennis",
+            "id": 2
+
+        }
+    ]
+}
