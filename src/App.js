@@ -15,7 +15,7 @@ function App() {
     <Router>
       <Box className='App'>
         <Navbar />
-        <Box className='content'>
+        <Box>
           <Routes>
             <Route exact path='/' element={<Home />}>
           
